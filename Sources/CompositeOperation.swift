@@ -207,3 +207,21 @@ public struct SourceOverCompositing: CompositeFilterable {
         self.compositeOperator = CompositeOperator.init(filter: CIFilter(name: "CISourceOverCompositing")!, backgroundImage)
     }
 }
+
+public struct MultiplyBlendMode: CompositeFilterable {
+    
+    public let compositeOperator: CompositeOperator
+    
+    public init(backgroundImage: CIImage) {
+        self.compositeOperator = CompositeOperator.init(filter: CIFilter(name: "CIMultiplyBlendMode")!, backgroundImage)
+    }
+}
+
+public struct SoftLightBlendMode: CompositeFilterable {
+    
+    public let compositeOperator: CompositeOperator
+    
+    public init(backgroundImage: CIImage) {
+        self.compositeOperator = CompositeOperator.init(filter: CIFilter(name: "CISoftLightBlendMode")!, backgroundImage)
+    }
+}
